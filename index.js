@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', async function(ev) {
       const weatherData = await getWeatherData(city);
       console.log(weatherData);
       renderData(weatherData);
-    
+      cityInput.value = "";
     } catch(error){
       console.error(error);
       renderError(error)
